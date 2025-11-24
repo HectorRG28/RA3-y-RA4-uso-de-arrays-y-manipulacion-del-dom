@@ -173,7 +173,7 @@ const examples = [
     // 17. join()
     {
         method: "Array.prototype.join()",
-        description: "Une todos los elementos de un array en una cadena y devuelve esta cadena.",
+        description: "Une todos los elementos de un array en una cadena y devuelve la cadena",
         example: 'let array = [40, 0, 0, 40, 50];\narray.join("-"); // "40-0-0-40-50"',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -183,7 +183,7 @@ const examples = [
     // 18. keys()
     {
         method: "Array.prototype.keys()",
-        description: "Devuelve un nuevo objeto Iterador de Array que contiene las claves (índices) para cada índice del array.",
+        description: "Devuelve un nuevo objeto Iterador de Array que contiene las claves indice",
         example: 'let array = [40, 0, 0, 40, 50];\nlet iterator = array.keys();\n// Iterar sobre el iterador...',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -198,7 +198,7 @@ const examples = [
     // 19. lastIndexOf()
     {
         method: "Array.prototype.lastIndexOf()",
-        description: "Devuelve el último índice en el que se puede encontrar un elemento dado, o -1 si no está presente.",
+        description: "Devuelve el último índice dado",
         example: 'let array = [40, 0, 0, 40, 50];\narray.lastIndexOf(40); // 3',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -208,7 +208,7 @@ const examples = [
     // 20. map()
     {
         method: "Array.prototype.map()",
-        description: "Crea un nuevo array con los resultados de la llamada a la función indicada aplicados a cada uno de sus elementos.",
+        description: "Crea un nuevo array con respecto a la función indicada",
         example: 'let array = [40, 0, 0, 40, 50];\nlet mapeado = array.map(n => n * 2);',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -218,7 +218,7 @@ const examples = [
     // 21. pop()
     {
         method: "Array.prototype.pop()",
-        description: "Elimina el último elemento de un array y devuelve ese elemento. Modifica el array original.",
+        description: "Elimina el último elemento de un array",
         example: 'let array = [40, 0, 0, 40, 50];\narray.pop(); // Devuelve 50, array queda [40, 0, 0, 40]',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -229,7 +229,7 @@ const examples = [
     // 22. push()
     {
         method: "Array.prototype.push()",
-        description: "Agrega uno o más elementos al final de un array y devuelve la nueva longitud del array. Modifica el original.",
+        description: "Agrega uno o más elementos al final de un array y lo devuelve modificando al original",
         example: 'let array = [40, 0, 0, 40];\narray.push(60); // Devuelve 5, array queda [40, 0, 0, 40, 60]',
         execute: () => {
             let array = [40, 0, 0, 40]; 
@@ -240,7 +240,7 @@ const examples = [
     // 23. reduce()
     {
         method: "Array.prototype.reduce()",
-        description: "Aplica una función a un acumulador y a cada valor (de izquierda a derecha) para reducirlo a un único valor.",
+        description: "Aplica una función a un acumulador y a cada valor",
         example: 'let array = [40, 0, 0, 40, 60];\narray.reduce((acc, n) => acc + n, 0); // 140',
         execute: () => {
             let array = [40, 0, 0, 40, 60];
@@ -250,7 +250,7 @@ const examples = [
     // 24. reduceRight()
     {
         method: "Array.prototype.reduceRight()",
-        description: "Aplica una función a un acumulador y a cada valor (de derecha a izquierda) para reducirlo a un único valor.",
+        description: "Aplica una función a un acumulador y a cada valor",
         example: 'let array = [40, 0, 0, 40, 60];\narray.reduceRight((acc, n) => acc - n, 0); // 0 - 60 - 40 - 0 - 0 - 40 = -140',
         execute: () => {
             let array = [40, 0, 0, 40, 60];
@@ -260,7 +260,7 @@ const examples = [
     // 25. reverse()
     {
         method: "Array.prototype.reverse()",
-        description: "Invierte el orden de los elementos de un array in-place (modifica el original).",
+        description: "Invierte el orden de los elementos de un array in-place",
         example: 'let array = [40, 0, 0, 40, 60];\narray.reverse(); // [60, 40, 0, 0, 40]',
         execute: () => {
             let array = [40, 0, 0, 40, 60];
@@ -271,7 +271,7 @@ const examples = [
     // 26. shift()
     {
         method: "Array.prototype.shift()",
-        description: "Elimina el primer elemento de un array y devuelve ese elemento. Modifica el array original.",
+        description: "Elimina el primer elemento de un array y devuelve ese elemento modificando el original",
         example: 'let array = [60, 40, 0, 0, 40];\narray.shift(); // Devuelve 60, array queda [40, 0, 0, 40]',
         execute: () => {
             let array = [60, 40, 0, 0, 40];
@@ -282,7 +282,7 @@ const examples = [
     // 27. slice()
     {
         method: "Array.prototype.slice()",
-        description: "Devuelve una copia superficial de una porción del array dentro de un nuevo objeto array.",
+        description: "Devuelve una copia de los elementos entre dos índices",
         example: 'let array = [40, 0, 0, 40];\narray.slice(1, 3); // [0, 0]',
         execute: () => {
             let array = [40, 0, 0, 40];
@@ -302,7 +302,7 @@ const examples = [
     // 29. sort()
     {
         method: "Array.prototype.sort()",
-        description: "Ordena los elementos de un array in-place (modifica el original). Se usa función comparadora para números.",
+        description: "Ordena los elementos comparando los números",
         example: 'let array = [40, 0, 0, 40];\narray.sort((a, b) => b - a); // Orden descendente',
         execute: () => {
             let array = [40, 0, 0, 40];
@@ -313,7 +313,7 @@ const examples = [
     // 30. splice()
     {
         method: "Array.prototype.splice()",
-        description: "Cambia el contenido de un array eliminando elementos existentes y/o agregando nuevos. Modifica el original.",
+        description: "Cambia el contenido de un array eliminando elementos existentes y modficando el original.",
         example: 'let array = [40, 40, 0, 0];\n// Elimina 2 elementos desde el índice 1, y agrega 100, 200\narray.splice(1, 2, 100, 200);',
         execute: () => {
             let array = [40, 40, 0, 0];
@@ -324,7 +324,7 @@ const examples = [
     // 31. [@@iterator]()
     {
         method: "Array.prototype.[@@iterator]()",
-        description: "Devuelve el iterador por defecto de un array, usado implícitamente por 'for...of'.",
+        description: "Devuelve el iterador por defecto de un array",
         example: 'let array = [40, 100, 200, 0];\n// for (const value of array) { ... }',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -348,7 +348,7 @@ const examples = [
     // 33. toReversed()
     {
         method: "Array.prototype.toReversed()",
-        description: "Devuelve un nuevo array con los elementos invertidos, sin modificar el original.",
+        description: "Devuelve un nuevo array con los elementos invertidos sin tener que modificar el original",
         example: 'let array = [40, 100, 200, 0];\narray.toReversed(); // [0, 200, 100, 40]',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -359,7 +359,7 @@ const examples = [
     // 34. toSorted()
     {
         method: "Array.prototype.toSorted()",
-        description: "Devuelve un nuevo array con los elementos ordenados, sin modificar el original.",
+        description: "Devuelve un array con los elementos de manera ordenada sin modificar el original.",
         example: 'let array = [40, 100, 200, 0];\narray.toSorted((a, b) => a - b); // [0, 40, 100, 200]',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -370,7 +370,7 @@ const examples = [
     // 35. toSpliced()
     {
         method: "Array.prototype.toSpliced()",
-        description: "Devuelve un nuevo array con algunos elementos eliminados y/o reemplazados, sin modificar el original.",
+        description: "Devuelve un nuevo array con elementos eliminados o reemplazados sin modificar el original.",
         example: 'let array = [40, 100, 200, 0];\n// Elimina 1 elemento desde el índice 1, agrega 300\narray.toSpliced(1, 1, 300); // [40, 300, 200, 0]',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -380,7 +380,7 @@ const examples = [
     // 36. toString()
     {
         method: "Array.prototype.toString()",
-        description: "Devuelve una cadena que representa el array (similar a join(',') ).",
+        description: "Devuelve una cadena que representa el array.",
         example: 'let array = [40, 100, 200, 0];\narray.toString(); // "40,100,200,0"',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -390,7 +390,7 @@ const examples = [
     // 37. unshift()
     {
         method: "Array.prototype.unshift()",
-        description: "Agrega uno o más elementos al inicio del array y devuelve la nueva longitud. Modifica el original.",
+        description: "Agrega uno o más elementos al inicio del array modificando el original.",
         example: 'let array = [40, 100, 200, 0];\narray.unshift(10); // array queda [10, 40, 100, 200, 0]',
         execute: () => {
             let array = [40, 100, 200, 0];
@@ -401,7 +401,7 @@ const examples = [
     // 38. values()
     {
         method: "Array.prototype.values()",
-        description: "Devuelve un nuevo objeto Iterador de Array que contiene los valores para cada índice del array.",
+        description: "Devuelve un nuevo objeto Iterador que contiene los indices de los elementos del array.",
         example: 'let array = [10, 40, 100, 200, 0];\nlet iterator = array.values();\n// Iterar sobre el iterador...',
         execute: () => {
             let array = [10, 40, 100, 200, 0];
@@ -426,11 +426,10 @@ const examples = [
     }
 ];
 
-// Función para mostrar los resultados al hacer clic en "Ejecutar Ejemplo"
-// Esta función manipula el DOM para mostrar la salida de cada método.
+// Función para mostrar los resultados al pulsar el botón, de esta forma manipulo el DOM
 window.showResult = function(index) {
     const resultDiv = document.getElementById(`result-${index}`);
-    // Ejecuta la función asociada al método y obtiene el resultado
+    // Ejecuta la función y da el resultado
     let result;
     try {
         result = examples[index].execute(); 
@@ -438,16 +437,16 @@ window.showResult = function(index) {
         result = `ERROR: ${e.message}`;
     }
     
-    // Manipulación del DOM para mostrar el resultado
+    // Manipulación del DOM para eseñar el resultado
     resultDiv.style.display = "block";
-    // Usa JSON.stringify para mostrar arrays y objetos de forma legible
+    // Usa JSON para enseñar los arrays
     let output = typeof result === 'object' && result !== null ? JSON.stringify(result, null, 2) : String(result);
 
     resultDiv.textContent = 'Resultado: ' + output; 
 }
 
 
-// Renderizando las secciones dinámicamente al cargar el DOM
+// Renderizando las secciones  para ver dinamicamente los ejemplos
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById("examples");
     examples.forEach(({ method, description, example }, index) => {
