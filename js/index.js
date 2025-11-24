@@ -1,19 +1,19 @@
-// Array que contiene la definición de los 39 ejemplos de métodos de Array
+// Defenicion de los métodos array
 const examples = [
     // 1. at()
     {
         method: "Array.prototype.at()",
-        description: "Accede al elemento en una posición específica (soporta índices negativos).",
+        description: "Accede al elemento que quieras",
         example: 'let array = [10, 20, 30, 40, 50];\n// array.at(1) -> 20\n// array.at(-1) -> 50',
         execute: () => {
-            let array = [10, 20, 30, 40, 50];
+            let array = [11, 24, 38, 62, 70];
             return `Índice 1: ${array.at(1)}, Índice -1: ${array.at(-1)}`;
         }
     },
     // 2. concat()
     {
         method: "Array.prototype.concat()",
-        description: "Combina arrays y devuelve un nuevo array sin modificar los originales.",
+        description: "Combina y envia uno nuevo sin modificar el anterior.",
         example: 'let array1 = [10, 20, 30, 40, 50];\nlet extra = [60, 70];\nlet combinado = array1.concat(extra);',
         execute: () => {
             let array = [10, 20, 30, 40, 50];
@@ -24,7 +24,7 @@ const examples = [
     // 3. copyWithin()
     {
         method: "Array.prototype.copyWithin()",
-        description: "Copia una parte del array dentro de sí mismo en la posición de destino, modificando el original. (array.copyWithin(destino, inicio, fin?))",
+        description: "Copia una parte del array pegandolo en él mismo (array.copyWithin(destino, inicio, fin?))",
         example: 'let array = [10, 20, 30, 40, 50];\narray.copyWithin(0, 3);\n// Copia desde índice 3 (40) al inicio (índice 0).',
         execute: () => {
             let array = [10, 20, 30, 40, 50];
@@ -35,7 +35,7 @@ const examples = [
     // 4. entries()
     {
         method: "Array.prototype.entries()",
-        description: "Devuelve un nuevo objeto Iterador de Array que contiene los pares clave/valor para cada índice.",
+        description: "Devuelve un nuevo iterador",
         example: 'let array = [40, 50, 30, 40, 50];\nlet iterator = array.entries();\n// Iterar sobre el iterador...',
         execute: () => {
             let array = [40, 50, 30, 40, 50]; 
@@ -44,13 +44,13 @@ const examples = [
             for (const entry of iterator) {
                 result.push(entry);
             }
-            return result; // Muestra los pares [índice, valor]
+            return result; // Muestra los pares 
         }
     },
     // 5. every()
     {
         method: "Array.prototype.every()",
-        description: "Verifica si todos los elementos del array cumplen una condición.",
+        description: "Verifica si todos los elementos del array",
         example: 'let array = [40, 50, 30, 40, 50];\narray.every(n => n > 20); // false',
         execute: () => {
             let array = [40, 50, 30, 40, 50]; 
@@ -60,7 +60,7 @@ const examples = [
     // 6. fill()
     {
         method: "Array.prototype.fill()",
-        description: "Rellena todos los elementos de un array con un valor estático desde un índice inicial a uno final (opcional). Modifica el array original.",
+        description: "Rellena devolviendo un valor estático",
         example: 'let array = [40, 50, 30, 40, 50];\narray.fill(0, 1, 3); // Rellena con 0, desde índice 1 (incluido) hasta 3 (excluido).',
         execute: () => {
             let array = [40, 50, 30, 40, 50];
@@ -71,7 +71,7 @@ const examples = [
     // 7. filter()
     {
         method: "Array.prototype.filter()",
-        description: "Crea un nuevo array con todos los elementos que cumplan la condición implementada por la función dada.",
+        description: "Crea un nuevo array con todos los elementos que cumplan la condición",
         example: 'let array = [40, 0, 0, 40, 50];\nlet filtrado = array.filter(n => n > 30);',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -81,7 +81,7 @@ const examples = [
     // 8. find()
     {
         method: "Array.prototype.find()",
-        description: "Devuelve el primer elemento del array que cumple la función de prueba proporcionada.",
+        description: "Devuelve el primer elemento del array",
         example: 'let array = [40, 0, 0, 40, 50];\narray.find(n => n > 30); // Devuelve 40 (el primero que encuentra)',
         execute: () => {
             let array = [40, 0, 0, 40, 50]; 
@@ -91,7 +91,7 @@ const examples = [
     // 9. findIndex()
     {
         method: "Array.prototype.findIndex()",
-        description: "Devuelve el índice del primer elemento del array que cumple la función de prueba.",
+        description: "Devuelve el índice del primer elemento",
         example: 'let array = [40, 0, 0, 40, 50];\narray.findIndex(n => n > 30); // Devuelve 0',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -101,7 +101,7 @@ const examples = [
     // 10. findLast()
     {
         method: "Array.prototype.findLast()",
-        description: "Devuelve el último elemento del array que cumple la función de prueba proporcionada (busca desde el final).",
+        description: "Devuelve el último elemento del array",
         example: 'let array = [40, 0, 0, 40, 50];\narray.findLast(n => n > 30); // Devuelve 50',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -111,7 +111,7 @@ const examples = [
     // 11. findLastIndex()
     {
         method: "Array.prototype.findLastIndex()",
-        description: "Devuelve el índice del último elemento del array que cumple la función de prueba.",
+        description: "Devuelve el índice del último elemento del array",
         example: 'let array = [40, 0, 0, 40, 50];\narray.findLastIndex(n => n > 30); // Devuelve 4',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -121,7 +121,7 @@ const examples = [
     // 12. flat()
     {
         method: "Array.prototype.flat()",
-        description: "Crea un nuevo array con todos los elementos de sub-array concatenados recursivamente hasta la profundidad especificada.",
+        description: "Crea un nuevo array con todos los elementos hasta la posición indicada.",
         example: 'let nested = [1, [2, [3, 4]]];\nnested.flat(2); // [1, 2, 3, 4]',
         execute: () => {
             let nested = [1, [2, [3, 4]]];
@@ -131,7 +131,7 @@ const examples = [
     // 13. flatMap()
     {
         method: "Array.prototype.flatMap()",
-        description: "Aplica una función a cada elemento y luego 'aplana' el resultado en un nuevo array.",
+        description: "Aplica una función e indica el elemento",
         example: 'let duplicados = [1, 2, 3];\nduplicados.flatMap(n => [n, n * 2]) // [1, 2, 2, 4, 3, 6]',
         execute: () => {
             let duplicados = [1, 2, 3];
@@ -141,7 +141,7 @@ const examples = [
     // 14. forEach()
     {
         method: "Array.prototype.forEach()",
-        description: "Ejecuta una función proporcionada una vez por cada elemento del array. Devuelve undefined.",
+        description: "Ejecuta una función proporcionada por algun elemento",
         example: 'let array = [40, 0, 0, 40, 50];\narray.forEach(n => console.log(n));',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -153,7 +153,7 @@ const examples = [
     // 15. includes()
     {
         method: "Array.prototype.includes()",
-        description: "Determina si un array incluye un determinado valor, devolviendo true o false según corresponda.",
+        description: "Determina si un array incluye el valor indicado",
         example: 'let array = [40, 0, 0, 40, 50];\narray.includes(40); // true',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
@@ -163,7 +163,7 @@ const examples = [
     // 16. indexOf()
     {
         method: "Array.prototype.indexOf()",
-        description: "Devuelve el primer índice en el que se puede encontrar un elemento dado, o -1 si no está presente.",
+        description: "Devuelve el primer índice en el que se puede encontrar cierto elemento",
         example: 'let array = [40, 0, 0, 40, 50];\narray.indexOf(40); // 0',
         execute: () => {
             let array = [40, 0, 0, 40, 50];
